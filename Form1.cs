@@ -115,6 +115,7 @@ namespace math2
 
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft + " seconds";
+                timeLabel.BackColor = Color.Orange;
             }
             else
             {
@@ -160,6 +161,11 @@ namespace math2
                 quotient.Value = dividend / divisor;
                 quotient1.Value = dividend1 / divisor1;
                 button1.Enabled = true;
+            }
+            
+             if (timeLeft < 11)
+            {
+                timeLabel.BackColor = Color.Red;
             }
         }
         private bool CheckTheAnswer()
